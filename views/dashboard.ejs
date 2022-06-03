@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head') %>
+</head>
+
+<body class="font-poppins">
+    <div class="grid grid-cols-layout overflow-hidden">
+        <%- include('partials/sidebar', { activeLink : 'home' }) %>
+
+            <main class="bg-gray-50 h-screen overflow-y-auto">
+                <div class="container py-8">
+                    <!-- Main Content -->
+                    <h1 class="text-3xl font-medium mb-4 text-gray-700">Dashboard</h1>
+
+                    <!-- Stats -->
+                    <div class="py-8">
+                        <section class="grid grid-cols-3 gap-4 text-center">
+                            <article class="bg-white px-6 py-4">
+                                <img src="/images/employees.svg" alt="Employees"
+                                    class="inline-block h-48 aspect-square object-contain">
+
+                                <h2 class="text-lg mb-4">Currently Employed</h2>
+
+                                <span class="text-4xl font-bold">
+                                    <%= new Intl.NumberFormat('en-US').format(4312) %>
+                                </span>
+                            </article>
+
+                            <article class="bg-white px-6 py-4">
+                                <img src="/images/departments.svg" alt="Departments"
+                                    class="inline-block h-48 aspect-square object-contain">
+
+                                <h2 class="text-lg mb-4">Most Popular Department</h2>
+
+                                <span class="text-4xl font-bold">
+                                    Web Design
+                                </span>
+                            </article>
+
+                            <article class="bg-white px-6 py-4">
+                                <img src="/images/supervisors.svg" alt="Supervisors"
+                                    class="inline-block h-48 aspect-square object-contain">
+
+                                <h2 class="text-lg mb-4">Average Num. of Supervisors</h2>
+
+                                <span class="text-4xl font-bold">
+                                    <%= new Intl.NumberFormat('en-US').format(6) %>
+                                </span>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </main>
+    </div>
+</body>
+
+</html>

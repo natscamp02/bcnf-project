@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.nav-link {
+		@apply inline-flex gap-2 w-full p-4 bg-gray-800 hover:bg-gray-600;
+	}
+	.nav-link.active {
+		@apply bg-blue-500;
+	}
+
+	.btn {
+		@apply inline-flex items-center gap-2 py-3 px-6 rounded-full bg-blue-500 text-white text-sm transition duration-300 hover:bg-blue-600 hover:shadow-lg;
+	}
+
+	.btn-icon {
+		@apply rounded-full p-2 inline-block transition duration-300 hover:brightness-75;
+	}
+	.btn-icon.solid {
+		@apply text-white bg-blue-500;
+	}
+}

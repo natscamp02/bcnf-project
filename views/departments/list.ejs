@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+
+<body class="font-poppins">
+    <div class="grid grid-cols-layout overflow-hidden">
+        <%- include('../partials/sidebar', { activeLink : 'department' } ) %>
+
+            <main class="bg-gray-50 h-screen overflow-y-auto">
+                <div class="container py-8">
+                    <!-- Main Content -->
+                    <h1 class="text-3xl font-medium mb-4 text-gray-700">All Departments</h1>
+
+                    <!-- Supervisor List -->
+                    <div class="py-8">
+                        <div class="grid grid-cols-3 gap-8">
+                            <% departments.forEach(dpt=> { %>
+                                <span
+                                    class="w-full h-32 bg-blue-500 text-white text-center text-lg flex items-center justify-center shadow-md rounded transition hover:bg-black">
+                                    <%= dpt.department %>
+                                </span>
+                                <% }) %>
+                        </div>
+                    </div>
+                </div>
+            </main>
+    </div>
+</body>
+
+</html>

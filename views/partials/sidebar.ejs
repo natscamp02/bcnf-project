@@ -1,0 +1,73 @@
+<aside class="bg-gray-900 text-white">
+    <div class="flex flex-col h-full py-8 px-4">
+        <header class="mb-12">
+            <h1 class="text-2xl font-bold mb-6"><span class="text-orange-500">Amber</span> Innovations&trade;</h1>
+
+            <div class="flex justify-between gap-8">
+                <!-- Logged In Status -->
+                <p class="text-blue-300 text-sm">Logged in as <span class="font-bold">
+                        <%= locals.loggedInAs %>
+                    </span></p>
+
+                <a class="opacity-75 hover:opacity-100" href="/admin/logout" title="Logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <nav class="h-full">
+            <ul class="space-y-px">
+                <li>
+                    <a class="nav-link <%= activeLink === 'home' ? 'active' : '' %>" href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link <%= activeLink === 'employee' ? 'active' : '' %>" href="/employees">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+                        </svg>
+                        Employees
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link <%= activeLink === 'department' ? 'active' : '' %>" href="/departments">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        Departments
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link <%= activeLink === 'supervisor' ? 'active' : '' %>" href="/supervisors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        Supervisors
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <footer class="mt-auto py-4">
+            <div class="text-center">
+                <p class="opacity-75">&copy; Amber Innovations | 2022</p>
+            </div>
+        </footer>
+    </div>
+</aside>
