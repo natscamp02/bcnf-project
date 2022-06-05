@@ -1,7 +1,3 @@
-## Todo
+#BCNF Project
 
--   [ ] Add employee info
--   [ ] Edit employee info
--   [ ] Delete employee
-
--   [ ]
+This is the application for the BCNF project on the Google Classroom
