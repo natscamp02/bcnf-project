@@ -11,7 +11,7 @@
 	}
 
 	.btn {
-		@apply inline-flex items-center gap-2 py-3 px-6 rounded-full bg-blue-500 text-white text-sm transition duration-300 hover:bg-blue-600 hover:shadow-lg;
+		@apply inline-flex items-center gap-2 py-3 px-6 rounded-full bg-blue-500 text-white text-sm transition duration-300 hover:bg-blue-600 hover:shadow;
 	}
 
 	.btn-icon {

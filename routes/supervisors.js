@@ -76,13 +76,13 @@ router.post('/update', (req, res) => {
 	});
 });
 
-// Delete a supervisor
-router.get('/:id/delete', (req, res) => {
-	conn.query('DELETE FROM supervisors WHERE id = ' + req.params.id, (err, result) => {
-		if (err) console.log(err);
+// // Delete a supervisor
+// router.get('/:id/delete', (req, res) => {
+// 	conn.query('DELETE FROM supervisors WHERE id = ' + req.params.id, (err, result) => {
+// 		if (err) console.log(err);
 
-		res.redirect('/supervisors');
-	});
-});
+// 		res.redirect('/supervisors');
+// 	});
+// });
 
 module.exports = router;

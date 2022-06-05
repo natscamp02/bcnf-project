@@ -12,44 +12,54 @@
             <main class="bg-gray-50 h-screen overflow-y-auto">
                 <div class="container py-8">
                     <!-- Main Content -->
-                    <h1 class="text-3xl font-medium mb-4 text-gray-700">Dashboard</h1>
+                    <h1 class="text-3xl font-medium mb-8 text-gray-700">Dashboard</h1>
 
                     <!-- Stats -->
                     <div class="py-8">
-                        <section class="grid grid-cols-3 gap-4 text-center">
-                            <article class="bg-white px-6 py-4">
+                        <section class="grid grid-cols-3 gap-4 text-center mb-6">
+                            <article class="bg-white px-6 pt-4 pb-8">
                                 <img src="/images/employees.svg" alt="Employees"
                                     class="inline-block h-48 aspect-square object-contain">
 
-                                <h2 class="text-lg mb-4">Currently Employed</h2>
+                                <h2 class="text-lg mb-4 text-gray-600">Currently Employed</h2>
 
-                                <span class="text-4xl font-bold">
-                                    <%= new Intl.NumberFormat('en-US').format(4312) %>
+                                <span class="text-4xl font-semibold">
+                                    <%= new Intl.NumberFormat('en-US').format(num_of_employees) || 'N/A' %>
                                 </span>
                             </article>
 
-                            <article class="bg-white px-6 py-4">
+                            <article class="bg-white px-6 pt-4 pb-8">
                                 <img src="/images/departments.svg" alt="Departments"
                                     class="inline-block h-48 aspect-square object-contain">
 
-                                <h2 class="text-lg mb-4">Most Popular Department</h2>
+                                <h2 class="text-lg mb-4 text-gray-600">Most Popular Department</h2>
 
-                                <span class="text-4xl font-bold">
-                                    Web Design
+                                <span class="text-4xl font-semibold">
+                                    <%= popular_dprt || 'N/A' %>
                                 </span>
                             </article>
 
-                            <article class="bg-white px-6 py-4">
+                            <article class="bg-white px-6 pt-4 pb-8">
                                 <img src="/images/supervisors.svg" alt="Supervisors"
                                     class="inline-block h-48 aspect-square object-contain">
 
-                                <h2 class="text-lg mb-4">Average Num. of Supervisors</h2>
+                                <h2 class="text-lg mb-4 text-gray-600">Average Num. of Supervisors</h2>
 
-                                <span class="text-4xl font-bold">
-                                    <%= new Intl.NumberFormat('en-US').format(6) %>
+                                <span class="text-4xl font-semibold">
+                                    <%= new Intl.NumberFormat('en-US').format(Math.round(avg_num_of_sup)) || 'N/A' %>
                                 </span>
                             </article>
                         </section>
+
+                        <p class="text-center">
+                            <a href="#" class="btn">
+                                See More Stats
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </p>
                     </div>
                 </div>
             </main>
